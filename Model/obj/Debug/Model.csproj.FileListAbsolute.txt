@@ -1,0 +1,4 @@
+E:\WCFCallback\Model\bin\Debug\Model.dll
+E:\WCFCallback\Model\bin\Debug\Model.pdb
+E:\WCFCallback\Model\obj\Debug\Model.dll
+E:\WCFCallback\Model\obj\Debug\Model.pdb

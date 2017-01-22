@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5473b10e-2ef2-44bf-b46c-bf2edcf2055d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.157:9005/commServices" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommunicationService.wsdl" MetadataType="Wsdl" ID="9cb700fb-6569-46b4-a9e6-c25cc6fe04ac" SourceId="1" SourceUrl="http://192.168.0.157:9005/commServices?wsdl" />
+    <MetadataFile FileName="commServices.xsd" MetadataType="Schema" ID="adae44e5-ba8a-443a-b6bc-c0078a0aca43" SourceId="1" SourceUrl="http://192.168.0.157:9005/commServices?xsd=xsd0" />
+    <MetadataFile FileName="commServices.disco" MetadataType="Disco" ID="d3c4d9a9-730b-4fea-b33d-f875d83d6d62" SourceId="1" SourceUrl="http://192.168.0.157:9005/commServices?disco" />
+    <MetadataFile FileName="commServices1.xsd" MetadataType="Schema" ID="4eee129d-e5a9-46f1-87af-525b60dfbc24" SourceId="1" SourceUrl="http://192.168.0.157:9005/commServices?xsd=xsd1" />
+    <MetadataFile FileName="commServices2.xsd" MetadataType="Schema" ID="ea53d613-bdd5-4109-be5a-f1b917070e61" SourceId="1" SourceUrl="http://192.168.0.157:9005/commServices?xsd=xsd2" />
+    <MetadataFile FileName="commServices.wsdl" MetadataType="Wsdl" ID="91452be5-0668-46e6-8ef2-4d44f7c10f7f" SourceId="1" SourceUrl="http://192.168.0.157:9005/commServices?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

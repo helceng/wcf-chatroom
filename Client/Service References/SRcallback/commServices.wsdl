@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.Helceng.com/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.Helceng.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.Helceng.com/Imports">
+      <xsd:import schemaLocation="http://192.168.0.157:9005/commServices?xsd=xsd0" namespace="http://www.Helceng.com/" />
+      <xsd:import schemaLocation="http://192.168.0.157:9005/commServices?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.157:9005/commServices?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CommunicationService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_Leave_InputMessage">
+    <wsdl:part name="parameters" element="tns:Leave" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_SendHeartBeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendHeartBeat" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_IsUserOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserOnline" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_IsUserOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_GetOnlineUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineUsers" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_GetOnlineUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_SendGroupMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendGroupMsg" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_SendPublicMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPublicMsg" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_SendUserMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendUserMsg" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_UserJoined_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserJoined" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_UserLeave_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserLeave" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_UserOffline_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserOffline" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_ShowMsg_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowMsg" />
+  </wsdl:message>
+  <wsdl:message name="CommunicationService_ForceToQuit_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ForceToQuit" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="CommunicationService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Register">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/Register" message="tns:CommunicationService_Register_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Login">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/Login" message="tns:CommunicationService_Login_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Leave">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/Leave" message="tns:CommunicationService_Leave_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendHeartBeat">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/SendHeartBeat" message="tns:CommunicationService_SendHeartBeat_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/GetUserInfo" message="tns:CommunicationService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/GetUserInfoResponse" message="tns:CommunicationService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="IsUserOnline">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/IsUserOnline" message="tns:CommunicationService_IsUserOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/IsUserOnlineResponse" message="tns:CommunicationService_IsUserOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetOnlineUsers">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/GetOnlineUsers" message="tns:CommunicationService_GetOnlineUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/GetOnlineUsersResponse" message="tns:CommunicationService_GetOnlineUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendGroupMsg">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/SendGroupMsg" message="tns:CommunicationService_SendGroupMsg_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendPublicMsg">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/SendPublicMsg" message="tns:CommunicationService_SendPublicMsg_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendUserMsg">
+      <wsdl:input wsaw:Action="http://www.Helceng.com/CommunicationService/SendUserMsg" message="tns:CommunicationService_SendUserMsg_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UserJoined">
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/UserJoined" message="tns:CommunicationService_UserJoined_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UserLeave">
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/UserLeave" message="tns:CommunicationService_UserLeave_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UserOffline">
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/UserOffline" message="tns:CommunicationService_UserOffline_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowMsg">
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/ShowMsg" message="tns:CommunicationService_ShowMsg_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ForceToQuit">
+      <wsdl:output wsaw:Action="http://www.Helceng.com/CommunicationService/ForceToQuit" message="tns:CommunicationService_ForceToQuit_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
